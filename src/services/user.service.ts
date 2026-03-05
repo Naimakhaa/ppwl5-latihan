@@ -10,7 +10,7 @@ import { UserModel } from "../models/user.model";
 import type { User } from "../types/user.type";
 
 export const userService = {
-  getAllUsers(): UserModel[] {
+  getAll(): UserModel[] {
     return userRepository.findAll();
   },
 

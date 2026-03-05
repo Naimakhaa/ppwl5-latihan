@@ -30,21 +30,20 @@ export const userView = (users: UserModel[]) => `
         </form>
 
         <div class="grid gap-4">
-            ${users.map(user => `
-                <div class="bg-white shadow-sm border border-gray-200 rounded-lg p-4 flex justify-between items-center">
-                    <div>
-                        <p class="font-bold text-gray-800 text-lg">${user.displayName}</p>
-                        <p class="text-xs text-gray-400">ID: ${user.id}</p>
-                    </div>
-                    
-                    <form method="POST" action="/delete/${user.id}">
-                        <button type="submit" class="bg-red-500 text-white px-4 py-1.5 rounded text-sm font-medium hover:bg-red-600 transition">
-                            Delete
-                        </button>
-                    </form>
-                </div>
-            `).join("")}
+    ${users.map(user => `
+        <div class="bg-white shadow rounded p-4 flex justify-between items-center">
+            <div>
+                <p class="font-bold text-lg">${user.displayName}</p>
+                <p class="text-xs text-gray-400">ID: ${user.id}</p>
+            </div>
+            <form method="POST" action="/delete/${user.id}">
+                <button type="submit" class="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600">
+                    Delete
+                </button>
+            </form>
         </div>
+    `).join("")}
+</div>
     </div>
 </body>
 </html>

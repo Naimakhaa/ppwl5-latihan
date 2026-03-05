@@ -6,11 +6,10 @@ import { htmlResponse, redirect } from "../utils/response";
 export const userRoutes = new Elysia()
 
   .get("/", () => {
-    const users = userService.getAllUsers();
+    const users = userService.getAll();
     // return fungsi `htmlResponse` berisi parameter fungsi `userView` berisi parameter `users`
      return htmlResponse(userView(users));
   })
-
 
   .post("/create", async ({ body }) => {
     const data = body as any;
