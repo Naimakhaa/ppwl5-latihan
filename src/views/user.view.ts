@@ -15,7 +15,7 @@ export const userView = (users: UserModel[]) => `
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>User List</title>
-  <link href="/css/style.css" rel="stylesheet">
+  <link href="public/css/style.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 min-h-screen p-10">
     <div class="max-w-3xl mx-auto">
