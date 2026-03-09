@@ -20,7 +20,6 @@ export const userService = {
     }
     userRepository.create(user);
   },
-
   update(id: number, user: User) {
     userRepository.update(id, user);
   },
